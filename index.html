@@ -8,7 +8,44 @@
     <meta name="author" content="Scharfsinn">
     <title>Scharfsinn - Photography, Video & Web Design</title>
     <style>
-        /* Styles are the same as before */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            padding: 1em 0;
+            background: #555;
+            color: white;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+        }
+        .language-selector {
+            text-align: center;
+            margin: 1em 0;
+        }
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
     </style>
 </head>
 <body>
@@ -34,31 +71,6 @@
         <h2 id="welcome-title">Welcome to Scharfsinn</h2>
         <p id="welcome-text">On <strong>scharfsinn.com</strong> and <strong>scharfsinn.net</strong>, we offer visual solutions that impress. Let us transform your ideas into outstanding images, videos, and digital designs.</p>
     </section>
-    <section>
-        <h2 id="services-title">Our Services</h2>
-        <div class="services">
-            <div class="service" id="fotografie">
-                <img src="fotografie-icon.png" alt="Photography">
-                <h3 id="service-photography">Photography</h3>
-                <p id="service-photography-text">Professional photoshoots for businesses, events, and personal moments. Every shot tells your story.</p>
-            </div>
-            <div class="service" id="video">
-                <img src="video-icon.png" alt="Video Production">
-                <h3 id="service-video">Video Production</h3>
-                <p id="service-video-text">Creative videos that evoke emotions and deliver clear messages—from concept to post-production.</p>
-            </div>
-            <div class="service" id="design">
-                <img src="design-icon.png" alt="Graphic Design">
-                <h3 id="service-design">Graphic Design</h3>
-                <p id="service-design-text">Unique designs for logos, print media, and digital campaigns that make your brand stand out.</p>
-            </div>
-            <div class="service" id="webdesign">
-                <img src="webdesign-icon.png" alt="Web Design">
-                <h3 id="service-webdesign">Web Design</h3>
-                <p id="service-webdesign-text">Modern, responsive websites that impress on all devices and are SEO-optimized.</p>
-            </div>
-        </div>
-    </section>
     <footer>
         <p id="footer-text">&copy; 2025 Scharfsinn | Visit us on <a href="https://www.scharfsinn.com">scharfsinn.com</a> and <a href="https://www.scharfsinn.net">scharfsinn.net</a></p>
     </footer>
@@ -70,42 +82,31 @@
                 tagline: "Creative Photography, Video Production, Graphic Design & Web Design",
                 welcomeTitle: "Welcome to Scharfsinn",
                 welcomeText: "On scharfsinn.com and scharfsinn.net, we offer visual solutions that impress. Let us transform your ideas into outstanding images, videos, and digital designs.",
-                servicesTitle: "Our Services",
-                photography: "Photography",
-                photographyText: "Professional photoshoots for businesses, events, and personal moments. Every shot tells your story.",
-                video: "Video Production",
-                videoText: "Creative videos that evoke emotions and deliver clear messages—from concept to post-production.",
-                design: "Graphic Design",
-                designText: "Unique designs for logos, print media, and digital campaigns that make your brand stand out.",
-                webdesign: "Web Design",
-                webdesignText: "Modern, responsive websites that impress on all devices and are SEO-optimized.",
                 footerText: "&copy; 2025 Scharfsinn | Visit us on <a href='https://www.scharfsinn.com'>scharfsinn.com</a> and <a href='https://www.scharfsinn.net'>scharfsinn.net</a>",
             },
-            es: { /* Spanish translations */ },
-            de: { /* German translations */ }
+            es: {
+                title: "Scharfsinn",
+                tagline: "Fotografía creativa, producción de video, diseño gráfico y diseño web",
+                welcomeTitle: "Bienvenido a Scharfsinn",
+                welcomeText: "En scharfsinn.com y scharfsinn.net, ofrecemos soluciones visuales que impresionan. Transformemos tus ideas en imágenes, videos y diseños digitales excepcionales.",
+                footerText: "&copy; 2025 Scharfsinn | Visítanos en <a href='https://www.scharfsinn.com'>scharfsinn.com</a> y <a href='https://www.scharfsinn.net'>scharfsinn.net</a>",
+            },
+            de: {
+                title: "Scharfsinn",
+                tagline: "Kreative Fotografie, Videoproduktion, Grafikdesign & Webdesign",
+                welcomeTitle: "Willkommen bei Scharfsinn",
+                welcomeText: "Auf scharfsinn.com und scharfsinn.net bieten wir visuelle Lösungen, die beeindrucken. Lassen Sie uns Ihre Ideen in herausragende Bilder, Videos und digitale Designs verwandeln.",
+                footerText: "&copy; 2025 Scharfsinn | Besuchen Sie uns auf <a href='https://www.scharfsinn.com'>scharfsinn.com</a> und <a href='https://www.scharfsinn.net'>scharfsinn.net</a>",
+            }
         };
 
         function changeLanguage(language) {
             const lang = language || document.getElementById("language").value;
-        }
-        
-
-
-```javascript
             const texts = translations[lang] || translations.en; // Fallback to English
             document.getElementById("title").innerText = texts.title;
             document.getElementById("tagline").innerText = texts.tagline;
             document.getElementById("welcome-title").innerText = texts.welcomeTitle;
             document.getElementById("welcome-text").innerHTML = texts.welcomeText;
-            document.getElementById("services-title").innerText = texts.servicesTitle;
-            document.getElementById("service-photography").innerText = texts.photography;
-            document.getElementById("service-photography-text").innerText = texts.photographyText;
-            document.getElementById("service-video").innerText = texts.video;
-            document.getElementById("service-video-text").innerText = texts.videoText;
-            document.getElementById("service-design").innerText = texts.design;
-            document.getElementById("service-design-text").innerText = texts.designText;
-            document.getElementById("service-webdesign").innerText = texts.webdesign;
-            document.getElementById("service-webdesign-text").innerText = texts.webdesignText;
             document.getElementById("footer-text").innerHTML = texts.footerText;
         }
 
