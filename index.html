@@ -1,9 +1,141 @@
-<!doctype html>
-<html>
-  <head>
-    <title>This is the title of the webpage!</title>
-  </head>
-  <body>
-    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
-  </body>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Scharfsinn - Kreative Fotografie, Videoproduktion, Grafikdesign und Webdesign. Entdecken Sie visuelle Lösungen, die beeindrucken.">
+    <meta name="keywords" content="Fotografie, Videoproduktion, Grafikdesign, Webdesign, kreative Lösungen, Scharfsinn, scharfsinn.com, scharfsinn.net">
+    <meta name="author" content="Scharfsinn">
+    <title>Scharfsinn - Fotografie, Video & Webdesign</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: #f5f5f5;
+        }
+        header {
+            background: #222;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            margin: 5px 0;
+            font-size: 1.2em;
+        }
+        nav {
+            background: #444;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        section h2 {
+            color: #444;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+        .service {
+            flex: 1 1 calc(50% - 40px);
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            background: #f9f9f9;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .service img {
+            max-width: 100px;
+            margin-bottom: 15px;
+        }
+        .service h3 {
+            margin: 10px 0;
+            font-size: 1.5em;
+        }
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+        }
+        footer a {
+            color: #61dafb;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Scharfsinn</h1>
+        <p>Kreative Fotografie, Videoproduktion, Grafikdesign & Webdesign</p>
+    </header>
+    <nav>
+        <a href="#fotografie">Fotografie</a>
+        <a href="#video">Videoproduktion</a>
+        <a href="#design">Grafikdesign</a>
+        <a href="#webdesign">Webdesign</a>
+    </nav>
+    <section>
+        <h2>Willkommen bei Scharfsinn</h2>
+        <p>Auf <strong>scharfsinn.com</strong> und <strong>scharfsinn.net</strong> bieten wir Ihnen visuelle Lösungen, die beeindrucken. Lassen Sie uns Ihre Ideen in herausragende Bilder, Videos und digitale Designs verwandeln.</p>
+    </section>
+    <section>
+        <h2>Unsere Leistungen</h2>
+        <div class="services">
+            <div class="service" id="fotografie">
+                <img src="fotografie-icon.png" alt="Fotografie">
+                <h3>Fotografie</h3>
+                <p>Professionelle Fotoshootings für Unternehmen, Events und private Momente. Jede Aufnahme erzählt Ihre Geschichte.</p>
+            </div>
+            <div class="service" id="video">
+                <img src="video-icon.png" alt="Videoproduktion">
+                <h3>Videoproduktion</h3>
+                <p>Kreative Videos, die Emotionen wecken und Botschaften klar vermitteln – von Konzept bis Postproduktion.</p>
+            </div>
+            <div class="service" id="design">
+                <img src="design-icon.png" alt="Grafikdesign">
+                <h3>Grafikdesign</h3>
+                <p>Einzigartige Designs für Logos, Printmedien und digitale Kampagnen, die Ihre Marke hervorheben.</p>
+            </div>
+            <div class="service" id="webdesign">
+                <img src="webdesign-icon.png" alt="Webdesign">
+                <h3>Webdesign</h3>
+                <p>Moderne, responsive Websites, die auf allen Geräten beeindrucken und SEO-optimiert sind.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Scharfsinn | Besuchen Sie uns auf <a href="https://www.scharfsinn.com">scharfsinn.com</a> und <a href="https://www.scharfsinn.net">scharfsinn.net</a></p>
+    </footer>
+</body>
 </html>
